@@ -32,6 +32,7 @@
 
 #define ERR_STRINGIFY(S)    #S
 #define ERR_CLEAN           do { err = -1; goto clean; } while(0)
+#define ERR(id)             do { err = (id); goto clean; } while(0)
 
 /* general error messages */
 #define ERR_INTERNAL(msg)       "internal error: " msg
